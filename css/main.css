@@ -1,0 +1,181 @@
+body {
+    background-color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    padding: 10px 0;
+}
+
+#main-logo {
+    width: 300px;
+    display: block;
+    margin: 0 auto; /*margin top and bot, 0. Margin left and right auto*/
+    
+}
+
+#character_nav {
+    background-color: #675050;
+    background-image: url(../images/jjk_background.jpg);
+    
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.hidden {
+    display: none;
+}
+
+html, body {
+    height: 100%;
+
+}
+
+.characters {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.characters li {
+    width: 220px;
+    height: 10px 8pxpx;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 155px 0 rgb(131, 111, 1) inset;
+    transition: box-shadow .2s ease;
+    
+
+}
+.characters li:hover{
+    box-shadow: 0 220px 0 rgb(131, 111, 1) inset;
+
+}
+.characters li h5 {
+    color: #fff;
+    padding: 12px 8px;
+}
+
+article, #instructions {
+    padding: 20px;
+
+}
+
+article h3, #instructions h3 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+article p, #instructions p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.sprite {
+    width: 150px;
+    height: 150px;
+    background-image: url('../images/jjk_sprites.jpg');
+}
+
+#Yuji {background-position: -125px -150px;}
+#Megumi {background-position: -375px -150px;}
+#Nobara {background-position: -625px -150px;}
+#Gojo {background-position: -875px -150px;}
+#Sukuna {background-position: -1120px -150px;}
+#Toji {background-position: -1350px -150px;}
+
+#Yuji:hover, #Megumi:hover,#Nobara:hover,#Gojo:hover,#Sukuna:hover, #Toji:hover {
+    background-position-y: -2000px;
+}
+
+footer {
+    text-align: center;
+
+
+}
+
+.sticky_footer {
+    height: 80px;
+    background-color: rgb(40, 37, 37);
+    position: sticky;
+    top: 100%;
+
+}
+
+.lightbox {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.85);
+    background-image: url(../images/Yuji_Itadori.png);
+    background-repeat: no-repeat;
+
+    background-size: 55vh;
+    background-position: 40px bottom;
+    display: none;
+}
+#lightbox2 {
+    background-image: url('../images/Megumi_Fushiguro.png');
+}
+
+#lightbox3 {
+    background-image: url('../images/Nobara_Kugisaki.png');
+}
+
+#lightbox4 {
+    background-image: url('../images/Satoru_Gojo.png');
+}
+#lightbox5 {
+    background-image: url('../images/Sukuna.png');
+}
+#lightbox6 {
+    background-image: url('../images/Toji_Fushiguro.png');
+}
+.lightbox_close {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+
+    color: white;
+    font-size: 36px;
+
+    text-decoration: none;
+    font-weight: bolder;
+
+    transition: all 0.5s;
+}
+
+.lightbox_close:hover {
+    opacity: 0.5;
+    color: yellow;
+}
+
+.lightbox article {
+    width: 55%;
+    margin-left: 40%;
+    padding-top: 50px;
+
+}
+
+.lb_text, .lb_heading {
+    text-align: left;
+}
+
+.lb_text {
+    line-height: 26px;
+}
+
+/* .lightbox#lightbox5  */
+.lightbox:target {
+    display: block;
+}
